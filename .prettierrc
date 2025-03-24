@@ -1,0 +1,8 @@
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "semi": false,
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx", "cn", "twmerge", "cva"]
+}
