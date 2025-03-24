@@ -1,0 +1,20 @@
+pre-commit:
+  commands:
+    frontend-linter:
+      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}'
+      run: npx eslint --fix {staged_files} && git update-index --again
+      skip:
+        - merge
+        - rebase
+    frontend-css-linter:
+      glob: '*.{css,scss}'
+      run: npx stylelint --fix {staged_files} && git update-index --again
+      skip:
+        - merge
+        - rebase
+    frontend-formatter:
+      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'
+      run: npx prettier --write {staged_files} && git update-index --again
+      skip:
+        - merge
+        - rebase
