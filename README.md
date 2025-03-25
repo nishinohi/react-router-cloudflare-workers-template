@@ -31,3 +31,17 @@ A Cloudflare account is required for deployment.
 ```sh
 npm run deploy
 ```
+
+## Branches
+
+### feature/lefthook
+
+Add git hooks for linter and formatter.
+
+```sh
+npx lefthook install
+```
+
+### feature/vscode
+
+Add `settings.json`, `launch.json` and `extensions.json` for VSCode development.
