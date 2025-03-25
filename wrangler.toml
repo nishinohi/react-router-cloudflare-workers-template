@@ -1,0 +1,17 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "react-router-cloudflare-workers-template"
+
+main = "./server.ts"
+workers_dev = true
+# https://developers.cloudflare.com/workers/platform/compatibility-dates
+compatibility_date = "2025-03-25"
+
+[assets]
+# https://developers.cloudflare.com/workers/static-assets/binding/
+directory = "./build/client"
+
+[build]
+command = "npm run build"
+
+[vars]
+MY_VAR = "My Value"
