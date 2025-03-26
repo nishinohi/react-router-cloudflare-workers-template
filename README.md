@@ -45,3 +45,27 @@ npx lefthook install
 ### feature/vscode
 
 Add `settings.json`, `launch.json` and `extensions.json` for VSCode development.
+
+### feature/d1
+
+Version that added Cloudflare D1.
+
+```sh
+# local develolp
+# init local D1
+npm run db:migrate-local
+# create .env for local
+echo "D1_LOCAL_URL='./.wrangler/state/v3/d1/miniflare-D1DatabaseObject/[your_local].sqlite'" >> .env.local
+# migration by drizzle
+npx drizzle-kit push --config drizzle-local.config.ts
+npm run dev
+
+# production
+# init D1
+npm run db:create
+# generate migration file
+npm run db:generate
+# migration by wrangler
+npm run db:migrate-prod
+npm run deploy
+```

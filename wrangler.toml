@@ -15,3 +15,8 @@ command = "npm run build"
 
 [vars]
 MY_VAR = "My Value"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rtrr-cf-workers-test"
+database_id = "52aa51d2-9648-4fd0-8b3a-b5e83bbe88ee"
