@@ -2,4 +2,9 @@
 
 interface Env {
 	MY_VAR: "My Value";
+	BASE_URL: "http://localhost:5173";
+	CLIENT_SECRET: string;
+	CLIENT_ID: string;
+	SESSION_SECRET: string;
+	DB: D1Database;
 }

@@ -4,3 +4,13 @@
 # React Router
 /.react-router/
 /build/
+
+# env
+.env.*
+
+# cloudflare
+.wrangler
+.dev.vars
+
+# drizzle
+migrations/meta/
