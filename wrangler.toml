@@ -15,9 +15,14 @@ command = "npm run build"
 
 [vars]
 MY_VAR = "My Value"
+# BASE_URL = "https://react-router-cloudflare-workers-template.az-tech-manage.workers.dev"
 BASE_URL = "http://localhost:5173"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "rtrr-cf-workers-test"
 database_id = "52aa51d2-9648-4fd0-8b3a-b5e83bbe88ee"
+
+[[kv_namespaces]]
+binding = "SESSION_KV"
+id = "2aa236b5f86d498da9644f493cbfa87d"
