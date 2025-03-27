@@ -45,7 +45,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const { data, cloudflare, extra, isWaitUntilDefined } = loaderData
   return (
     <div>
-      <h1>React Router and Hono</h1>
+      <h1>React Router Auth Sample</h1>
       {data.map((user) => (
         <Form className="flex" key={user.id} method="delete">
           <label>{user.name}</label>
