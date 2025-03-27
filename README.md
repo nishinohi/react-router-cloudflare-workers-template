@@ -53,7 +53,7 @@ Version that implemented [better-auth](https://www.better-auth.com/), D1, and au
 ```sh
 # local
 # If the DB is not initialized.
-npm run db:migrate-local
+mkdir migrations && npm run db:migrate-local
 # Push schema to db.
 npm run db:drizzle-push-local
 # create secret
@@ -63,9 +63,11 @@ echo -e "CLIENT_SECRET=''\nCLIENT_ID=''\nSESSION_SECRET='$(openssl rand -base64 
 npm run dev
 
 # remote
+# Since drizzle-kit push will fail, need to genarate migration file and migrate it.
+# See below issue.
+# https://github.com/drizzle-team/drizzle-orm/issues/3728
 npm run db:generate
 npm run db:drizzle-migrate-prod
 # Set secret to your workers setting
-# Change the BASE_URL in wrangler.toml to the deploy URL of your Workers instance.
 npm run deploy
 ```

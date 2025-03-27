@@ -13,16 +13,40 @@ directory = "./build/client"
 [build]
 command = "npm run build"
 
+# production
 [vars]
-MY_VAR = "My Value"
-# BASE_URL = "https://react-router-cloudflare-workers-template.az-tech-manage.workers.dev"
-BASE_URL = "http://localhost:5173"
-
+MODE = 'production'
+BASE_URL = "https://react-router-cloudflare-workers-template.az-tech-manage.workers.dev"
 [[d1_databases]]
 binding = "DB"
 database_name = "rtrr-cf-workers-test"
 database_id = "52aa51d2-9648-4fd0-8b3a-b5e83bbe88ee"
-
 [[kv_namespaces]]
 binding = "SESSION_KV"
 id = "2aa236b5f86d498da9644f493cbfa87d"
+
+# develop
+[env.develop]
+[env.develop.vars]
+MODE = 'develop'
+BASE_URL = "http://localhost:5173"
+[[env.develop.d1_databases]]
+binding = "DB"
+database_name = "rtrr-cf-workers-test-develop"
+database_id = "de532577-d0e1-4299-be80-4aac05f70f21"
+[[env.develop.kv_namespaces]]
+binding = "SESSION_KV"
+id = "c13c01c7f0d14b3d972aea806830e799"
+
+# staging
+[env.staging]
+[env.staging.vars]
+MODE = 'staging'
+BASE_URL = "https://react-router-cloudflare-workers-template-staging.az-tech-manage.workers.dev"
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "rtrr-cf-workers-test-staging"
+database_id = "de532577-d0e1-4299-be80-4aac05f70f21"
+[[env.staging.kv_namespaces]]
+binding = "SESSION_KV"
+id = "c13c01c7f0d14b3d972aea806830e799"

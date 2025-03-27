@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 
-export type DBMode = 'local' | 'develop' | 'production'
+export type DBMode = 'local' | 'staging' | 'production'
 
 type D1RemoteCredentials = {
   accountId: string
@@ -33,7 +33,7 @@ export function loadD1Credentials(mode: DBMode): D1LocalCredentials | D1RemoteCr
   }
   if (!accountId || !databaseId || !token)
     throw Error(
-      `dbCredentials is not set. Please execute the following command to set a dbCredentials valueas in .env.production or .env.develop.
+      `dbCredentials is not set. Please execute the following command to set a dbCredentials valueas in .env.production or .env.staging.
     $ echo "CLOUDFLARE_ACCOUNT_ID=''\\nD1_ID=''\\nCLOUDFLARE_TOKEN=''" >> .env.production`,
     )
 

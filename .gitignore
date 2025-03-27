@@ -10,7 +10,7 @@
 
 # cloudflare
 .wrangler
-.dev.vars
+.dev.vars*
 
 # drizzle
 migrations/meta/

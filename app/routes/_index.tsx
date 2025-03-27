@@ -60,7 +60,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           add user
         </button>
       </Form>
-      <h2>Var is {cloudflare.env.MY_VAR}</h2>
+      <h2>mode is {cloudflare.env.MODE}</h2>
       <h3>
         {cloudflare.cf ? 'cf,' : ''}
         {cloudflare.ctx ? 'ctx,' : ''}

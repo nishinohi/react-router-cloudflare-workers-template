@@ -5,6 +5,7 @@
   "scripts": {
     "build": "react-router build",
     "deploy": "wrangler deploy",
+    "deploy:stg": "wrangler deploy --env staging",
     "dev": "react-router dev",
     "start": "wrangler dev",
     "typegen": "wrangler types",
@@ -17,6 +18,7 @@
     "db:migrate-local": "wrangler d1 migrations apply rtrr-cf-workers-test --local",
     "db:migrate-prod": "wrangler d1 migrations apply rtrr-cf-workers-test --remote",
     "db:drizzle-push-local": "drizzle-kit push --config drizzle-local.config.ts ",
+    "db:drizzle-migrate-stg": "drizzle-kit migrate --config drizzle-stg.config.ts",
     "db:drizzle-migrate-prod": "drizzle-kit migrate --config drizzle-prod.config.ts",
     "db:drop-all-local": "rm -rf .wrangler/state/v3/d1",
     "db:drop-all-prod": "echo \"🔥 Be careful 🔥\nYou can delete all tables in the production environment database by executing the following command.\n> wrangler d1 execute rtrr-cf-workers-test --remote --file='./db/seed/drop-all-table.sql'\"",

@@ -2,8 +2,8 @@
 
 interface Env {
 	SESSION_KV: KVNamespace;
-	MY_VAR: "My Value";
-	BASE_URL: "http://localhost:5173";
+	MODE: "production" | "develop" | "staging";
+	BASE_URL: "https://react-router-cloudflare-workers-template.az-tech-manage.workers.dev" | "http://localhost:5173";
 	CLIENT_SECRET: string;
 	CLIENT_ID: string;
 	SESSION_SECRET: string;
