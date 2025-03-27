@@ -8,7 +8,7 @@ import { getLoadContext } from './load-context'
 export default defineConfig(({ mode }) => {
   return {
     plugins: [
-      cloudflareDevProxy({ getLoadContext, environment: mode === 'develop' ? 'develop' : undefined }),
+      cloudflareDevProxy({ getLoadContext, environment: mode === 'development' ? 'develop' : undefined }),
       tailwindcss(),
       reactRouter(),
       tsconfigPaths(),

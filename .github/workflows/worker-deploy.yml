@@ -1,8 +1,9 @@
 name: Deploy Worker
+run-name: ${{ github.actor }} is deploy workers 🚀
 on:
   push:
     branches:
-      - main
+      - feature/auth
 jobs:
   deploy:
     runs-on: ubuntu-latest
